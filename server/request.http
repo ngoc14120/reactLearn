@@ -1,0 +1,50 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username":  "ngoctuyen",
+  "password": "12345"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username":  "ngoc1",
+  "password": "12345"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2U3NWYyOWI0Mzk5ODBjMDQ1OGZmYWMiLCJpYXQiOjE2NzYxMjcxNDN9.VDP7fMjpyAIr4-m6jX1KSysxbkZQCIDZuGI1fnriRkg
+
+{
+  "title":  "ngoctuyenhappy",
+  "description": "valentive",
+  "url": "shopee.com",
+  "status": "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2U3NWYyOWI0Mzk5ODBjMDQ1OGZmYWMiLCJpYXQiOjE2NzYxMjcxNDN9.VDP7fMjpyAIr4-m6jX1KSysxbkZQCIDZuGI1fnriRkg
+
+###
+
+PUT http://localhost:5000/api/posts/63e79b6d201df12b5cbaf351
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2U3NWYyOWI0Mzk5ODBjMDQ1OGZmYWMiLCJpYXQiOjE2NzYxMjcxNDN9.VDP7fMjpyAIr4-m6jX1KSysxbkZQCIDZuGI1fnriRkg
+
+{
+  "title":  "i love you",
+  "description": "tim ne",
+  "url": "https://vue.org",
+  "status": "LEARNING"
+}
+
+###
+DELETE  http://localhost:5000/api/posts/63e8f187bf0a391264d94373
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2U3NWYyOWI0Mzk5ODBjMDQ1OGZmYWMiLCJpYXQiOjE2NzYxMjcxNDN9.VDP7fMjpyAIr4-m6jX1KSysxbkZQCIDZuGI1fnriRkg
